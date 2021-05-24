@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Going windsurfing?</h1>
+    <b>Spot:</b> {{ city }}<br>
+    <b>Date from:</b> {{ date_from }}<br>
+    <b>Date to:</b> {{ date_to }}<br>
+    <br><br>
+
+
+    <h3>Temperature</h3>
+
+    Unit: Celsius degrees<br><br>
+
+    <h4>Air</h4>
+
+    Min: {{ storm_glass_summary.airTemperature.min }} <br>
+
+    Max: {{ storm_glass_summary.airTemperature.max }} <br>
+
+    Average: {{ storm_glass_summary.airTemperature.avg }} <br>
+
+    Standard deviation: {{ storm_glass_summary.airTemperature.stdev }}
+    <br><br>
+
+    <h4>Water</h4>
+
+    Min: {{ storm_glass_summary.waterTemperature.min }} <br>
+
+    Max: {{ storm_glass_summary.waterTemperature.max }} <br>
+
+    Average: {{ storm_glass_summary.waterTemperature.avg }} <br>
+
+    Standard deviation: {{ storm_glass_summary.waterTemperature.stdev }}
+    <br><br><br>
+
+
+    <h3>Wind</h3>
+    Unit: m/s<br><br>
+
+    Speed min: {{ storm_glass_summary.windSpeed.min }} <br>
+
+    Speed max: {{ storm_glass_summary.windSpeed.max }} <br>
+
+    Speed average: {{ storm_glass_summary.windSpeed.avg }} <br>
+
+    Speed standard deviation:
+    {{ storm_glass_summary.windSpeed.stdev }} <br><br>
+
+    Gust max:  {{ storm_glass_summary.gust.max }} <br>
+
+    Gust average: {{ storm_glass_summary.gust.avg }} <br>
+
+    Gust standard deviation:
+    {{ storm_glass_summary.gust.stdev }} <br><br><br>
+
+    <h3>Visibility</h3>
+    Unit: kilometers<br><br>
+
+    Min: {{ storm_glass_summary.visibility.min }} <br>
+
+    Max: {{ storm_glass_summary.visibility.max }} <br>
+
+    Average: {{ storm_glass_summary.visibility.avg }} <br>
+
+    Standard deviation:
+        {{ storm_glass_summary.visibility.stdev }} <br><br><br>
+
+{% endblock %}
